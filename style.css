@@ -1,0 +1,216 @@
+/* Variables */
+
+:root{
+    /* color primary*/
+
+    --text-very-dark-blue: #1d1e35;
+    --text-soft-red: #f47c57;
+
+    --bg-soft-violet: #af67e9;
+    --bg-soft-blue: #6565e7;
+
+    /* color neutral */
+
+    --text-very-dark-grayish-blue: #4a4b5e;
+    --text-dark-grayish-blue: #787887;
+
+    --dividers-light-grayish-blue: #e7e7e9;
+}
+
+/* Global */
+html, body{ 
+    min-height: 100vh;
+    
+  }
+
+body{  
+    position: relative;  
+    font-size: 12px;
+    font-family: Kumbh Sans;
+    margin: 0;
+    padding: 0;
+    background: rgb(175,103,233);
+    background: linear-gradient(180deg, rgba(175,103,233,1) 0%, rgba(101,101,231,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;    
+    overflow: hidden;
+    z-index: -1;    
+}
+
+/* container */
+
+.container{
+    display: flex;    
+    position: relative;
+    background-color: #FFFFFF;
+    width: 920px;
+    height: 520px;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    margin: auto;
+    margin-top: 125px;
+    border-radius: 20px;
+    overflow: hidden;    
+    z-index: 0;
+}
+
+.cont-excep{       
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 920px;
+    height: 520px;   
+    border-radius: 20px;
+    z-index: 1;    
+}
+
+.images{
+    position: absolute;
+    right: 505px;
+    bottom: -133px;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 950px;
+    width: 975px;
+    object-fit: none;
+    z-index: 2;  
+}
+
+.woman{
+    position: absolute;
+    top: 72px;
+    left: -87px;
+    background-image: url(./images/illustration-woman-online-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 380px;
+}
+
+.bg-container{      
+    position: absolute;
+    top: 60%;
+    left: -71px;
+    transform: translate(-15%, -50%); 
+    background-image: url(./images/illustration-box-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    z-index: 2;   
+}
+
+.faq{
+    font-size: 1rem;
+    width: 390px;
+    margin-left: 498px;
+    margin-top: 100px;    
+    text-align: left;
+}
+
+.faq-item{
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;  
+}
+
+p{
+    color: var(--text-very-dark-grayish-blue);
+}
+
+button{
+    background: none;
+    background-image: url(./images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotateX(0deg);
+    align-self: center;    
+    margin-right: 10px;    
+    border: none;        
+    height: 9px;
+    width: 14px;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+
+.active .btn{
+    transform: rotateX(180deg);
+    transition: all .3s ease-in;
+}
+
+
+
+.answer{   
+    display: none;    
+    font-size: 0.85rem;
+}
+
+.answer > p {
+    color: var(--text-dark-grayish-blue);
+}
+
+.active .answer{
+    display: block !important;
+    transition: display 0.3s ease-in;
+}
+
+.active .faq-quest{
+    font-weight: 700;
+}
+
+@media screen and (max-width: 375px){
+
+    .container{
+        width: 90%;
+        overflow:visible;
+    }
+
+    .cont-excep{
+        width: 90%;
+        z-index: 1;
+    }
+
+    .images{
+        width: 256px;
+        height: 250px;
+        bottom: 410px;
+        right: 40px;
+    }
+
+    .woman{
+        top: -114px;
+        left: 41px;
+        width: 254px;
+        height: 193px;
+        z-index: 2;
+    }
+
+    .bg-container{
+        top: -45px;
+        left: 33px;
+        width: 103px;
+        height: 103px;
+        transform: none;
+    }
+
+    h1{
+        text-align: center;        
+    }
+
+    .faq{
+        margin-left: 25px; 
+        width: 300px; 
+        margin-top: 140px;      
+    }
+
+    .faq-item{
+        font-size: 0.9rem;
+        border-bottom: 1px solid var(--dividers-light-grayish-blue);
+    }
+
+    
+}
+
